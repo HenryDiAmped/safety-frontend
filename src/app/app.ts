@@ -1,12 +1,17 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+
+import { EncabezadoComponent } from './compartido/componentes/encabezado/encabezado';
+import { PiePaginaComponent } from './compartido/componentes/pie-pagina/pie-pagina';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+
+  imports: [RouterOutlet, EncabezadoComponent, PiePaginaComponent],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css'],
 })
-export class App {
-  protected readonly title = signal('safety-frontend');
+export class AppComponent {
+  title = 'SAFETY-FRONTEND';
 }

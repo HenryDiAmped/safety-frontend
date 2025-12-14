@@ -1,1 +1,96 @@
-/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+:root {
+  --color-carbon: #121212;
+  --color-carbon-light: #1e1e1e;
+  --color-carbon-header: rgba(18, 18, 18, 0.95);
+
+  --color-rojo-fuego: #d32f2f;
+  --color-rojo-oscuro: #b71c1c;
+
+  --color-amarillo-aviso: #ffd740;
+
+  --color-blanco: #ffffff;
+  --color-gris-claro: #f4f6f8;
+  --color-texto-principal: #1a1a1a;
+  --color-texto-secundario: #546e7a;
+  --color-borde-suave: rgba(0, 0, 0, 0.08);
+
+  --borde-radio: 4px;
+  --header-height: 80px;
+  --ancho-maximo: 1200px;
+
+  --sombra-card: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --sombra-hover: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--color-gris-claro);
+  color: var(--color-texto-principal);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.contenedor-limite {
+  width: 100%;
+  max-width: var(--ancho-maximo);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+
+button.mat-mdc-raised-button,
+button.mat-mdc-flat-button,
+button.mat-mdc-stroked-button {
+  border-radius: var(--borde-radio) !important;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding-top: 1.2rem !important;
+  padding-bottom: 1.2rem !important;
+}
+
+.menu-bombero-panel {
+  background-color: var(--color-carbon) !important;
+  border: 1px solid var(--color-rojo-fuego);
+  border-radius: 0 0 8px 8px !important;
+  min-width: 200px !important;
+  margin-top: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.menu-bombero-panel .mat-mdc-menu-item {
+  color: var(--color-blanco) !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.menu-bombero-panel .mat-mdc-menu-item mat-icon {
+  color: var(--color-amarillo-aviso) !important;
+  margin-right: 16px;
+}
+
+.menu-bombero-panel .mat-mdc-menu-item:hover {
+  background-color: rgba(211, 47, 47, 0.15) !important;
+  border-left: 3px solid var(--color-rojo-fuego);
+  padding-left: 20px;
+}
+
+.menu-bombero-panel .mat-mdc-menu-content {
+  padding: 0 !important;
+}

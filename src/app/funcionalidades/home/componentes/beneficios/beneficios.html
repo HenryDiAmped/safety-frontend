@@ -1,0 +1,38 @@
+<section class="seccion-beneficios-dark">
+  <div class="contenedor grid-layout">
+    <div class="columna-texto">
+      <h2 class="titulo-seccion">Por qué elegirnos</h2>
+      <p class="subtitulo-seccion">Somos la autoridad en seguridad contra incendios en Perú.</p>
+      <div class="lista-interactiva">
+        <div
+          *ngFor="let item of listaBeneficios; let i = index"
+          class="item-beneficio"
+          [class.activo]="i === indiceActivo"
+          (mouseenter)="activarBeneficio(i)"
+        >
+          <div class="contenido-beneficio-top">
+            <div class="icono-wrapper">
+              <mat-icon>{{ item.icono }}</mat-icon>
+            </div>
+            <div class="texto-wrapper">
+              <h3>{{ item.titulo }}</h3>
+              <p>{{ item.descripcion }}</p>
+            </div>
+          </div>
+          <div class="imagen-mobile-wrapper">
+            <img [src]="item.imagenUrl" [alt]="item.titulo" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columna-imagen">
+      <div class="marco-imagen">
+        <img
+          [src]="listaBeneficios[indiceActivo].imagenUrl"
+          [alt]="listaBeneficios[indiceActivo].titulo"
+          class="imagen-animada"
+        />
+      </div>
+    </div>
+  </div>
+</section>

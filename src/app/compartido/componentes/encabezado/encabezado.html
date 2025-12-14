@@ -1,0 +1,33 @@
+<mat-toolbar class="navbar" [class.scrolled]="isScrolled">
+  <div class="container-limite">
+    <div class="logo-container">
+      <span class="brand">R&R</span>
+      <span class="tagline">SAFETY FIRE SOLUTIONS</span>
+    </div>
+    <div class="spacer"></div>
+    <nav class="nav-links">
+      <a href="#" class="nav-item activo">Inicio</a>
+      <a href="#" class="nav-item">Servicios</a>
+      <a href="#" class="nav-item">Clientes</a>
+      <a href="#" class="nav-item">Nosotros</a>
+    </nav>
+    <button mat-icon-button class="mobile-menu-btn" [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu" class="menu-bombero-panel" xPosition="before">
+      <button mat-menu-item>
+        <mat-icon>home</mat-icon>
+        <span>INICIO</span>
+      </button>
+      <button mat-menu-item><mat-icon>engineering</mat-icon> <span>SERVICIOS</span></button>
+      <button mat-menu-item>
+        <mat-icon>groups</mat-icon>
+        <span>CLIENTES</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>business</mat-icon>
+        <span>NOSOTROS</span>
+      </button>
+    </mat-menu>
+  </div>
+</mat-toolbar>

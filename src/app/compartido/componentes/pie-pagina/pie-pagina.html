@@ -1,0 +1,66 @@
+<div class="mapa-wrapper">
+  <iframe
+    src="https://maps.google.com/maps?q=Chorrillos,Lima&t=&z=13&ie=UTF8&iwloc=&output=embed"
+    width="100%"
+    height="350"
+    style="border: 0"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+  >
+  </iframe>
+  <div class="mapa-overlay"></div>
+</div>
+<footer class="footer-full">
+  <div class="footer-content">
+    <div class="footer-grid">
+      <div class="col-brand">
+        <h3 class="brand-title">SAFETY FIRE <span class="highlight">SOLUTIONS</span></h3>
+        <p class="brand-desc">Innovación tecnológica en seguridad y protección contra incendios.</p>
+        <div class="social-icons">
+          <a
+            *ngFor="let social of socialLinks"
+            [href]="social.url"
+            class="social-btn"
+            [attr.aria-label]="social.label"
+          >
+            <mat-icon>{{ social.icon }}</mat-icon>
+          </a>
+        </div>
+      </div>
+      <div class="col-links">
+        <h4>Empresa</h4>
+        <nav class="nav-vertical">
+          <a *ngFor="let item of companyLinks" mat-button href="#">
+            <mat-icon class="arrow-icon">chevron_right</mat-icon> {{ item }}
+          </a>
+        </nav>
+      </div>
+      <div class="col-contact">
+        <h4>Contáctanos</h4>
+        <ul class="contact-list">
+          <li>
+            <mat-icon>location_on</mat-icon>
+            <span>{{ contactInfo.address }}</span>
+          </li>
+          <li>
+            <mat-icon>phone_in_talk</mat-icon>
+            <span>{{ contactInfo.phone }}</span>
+          </li>
+          <li>
+            <mat-icon>mail</mat-icon>
+            <span>{{ contactInfo.email }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="legal-text">© {{ currentYear }} <strong>SAFETY FIRE SOLUTIONS SAC</strong>.</div>
+      <div class="bottom-links">
+        <a href="#">Privacidad</a>
+        <span class="separator">|</span>
+        <a href="#">Términos</a>
+      </div>
+    </div>
+  </div>
+</footer>
