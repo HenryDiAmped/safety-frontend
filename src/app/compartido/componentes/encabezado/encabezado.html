@@ -6,27 +6,40 @@
     </div>
     <div class="spacer"></div>
     <nav class="nav-links">
-      <a href="#" class="nav-item activo">Inicio</a>
-      <a href="#" class="nav-item">Servicios</a>
-      <a href="#" class="nav-item">Clientes</a>
-      <a href="#" class="nav-item">Nosotros</a>
+      <a routerLink="/inicio" routerLinkActive="activo" class="nav-item">Inicio</a>
+      <a routerLink="/servicios" routerLinkActive="activo" class="nav-item">Servicios</a>
+      <a routerLink="/cursos" routerLinkActive="activo" class="nav-item">Cursos</a>
+      <a routerLink="/clientes" routerLinkActive="activo" class="nav-item">Clientes</a>
+      <a routerLink="/nosotros" routerLinkActive="activo" class="nav-item">Nosotros</a>
+      <a routerLink="/contacto" routerLinkActive="activo" class="nav-item">Contacto</a>
     </nav>
     <button mat-icon-button class="mobile-menu-btn" [matMenuTriggerFor]="menu">
       <mat-icon>menu</mat-icon>
     </button>
     <mat-menu #menu="matMenu" class="menu-bombero-panel" xPosition="before">
-      <button mat-menu-item>
+      <button mat-menu-item [routerLink]="['/inicio']">
         <mat-icon>home</mat-icon>
         <span>INICIO</span>
       </button>
-      <button mat-menu-item><mat-icon>engineering</mat-icon> <span>SERVICIOS</span></button>
-      <button mat-menu-item>
+      <button mat-menu-item [routerLink]="['/servicios']">
+        <mat-icon>engineering</mat-icon>
+        <span>SERVICIOS</span>
+      </button>
+      <button mat-menu-item [routerLink]="['/cursos']">
+        <mat-icon>school</mat-icon>
+        <span>CURSOS</span>
+      </button>
+      <button mat-menu-item [routerLink]="['/clientes']">
         <mat-icon>groups</mat-icon>
         <span>CLIENTES</span>
       </button>
-      <button mat-menu-item>
+      <button mat-menu-item [routerLink]="['/nosotros']">
         <mat-icon>business</mat-icon>
         <span>NOSOTROS</span>
+      </button>
+      <button mat-menu-item [routerLink]="['/contacto']">
+        <mat-icon>email</mat-icon>
+        <span>CONTACTO</span>
       </button>
     </mat-menu>
   </div>
