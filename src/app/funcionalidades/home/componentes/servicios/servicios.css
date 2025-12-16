@@ -1,3 +1,7 @@
+:host {
+  display: block;
+  width: 100%;
+}
 .seccion-servicios-bg {
   background-color: var(--color-gris-claro, #f5f5f5);
   padding: 6rem 0;
@@ -37,6 +41,7 @@
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 2rem;
   margin-bottom: 4rem;
+  justify-content: center;
 }
 .card-wrapper {
   height: 100%;

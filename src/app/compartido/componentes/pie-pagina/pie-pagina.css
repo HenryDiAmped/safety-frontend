@@ -5,6 +5,7 @@
   --footer-title: #ffffff;
   --accent-color: var(--color-rojo-fuego, #d32f2f);
 }
+
 .mapa-wrapper {
   position: relative;
   width: 100%;
@@ -12,162 +13,242 @@
   background: black;
   border-bottom: 3px solid var(--accent-color);
 }
+
 .mapa-wrapper iframe {
   filter: grayscale(100%) invert(0%);
   opacity: 0.9;
   transition: all 0.5s ease;
   height: 100%;
+  display: block; /* Elimina espacio fantasma inferior */
 }
+
 .mapa-wrapper:hover iframe {
   filter: grayscale(0%);
   opacity: 1;
 }
+
 .footer-full {
   background-color: var(--footer-bg);
   color: var(--footer-text);
   font-family: 'Roboto', sans-serif;
-  padding: 2.5rem 0 1rem;
+  padding: 4rem 0 1rem; /* Más aire arriba */
   width: 100%;
 }
-.footer-content {
-  width: 90%;
-  max-width: 1400px;
-  margin: 0 auto;
-}
+
+/* Eliminamos .footer-content porque ahora usas .contenedor-limite global */
+
 .footer-grid {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1.2fr;
-  gap: 2rem;
-  margin-bottom: 2rem;
+  gap: 3rem;
+  margin-bottom: 3rem;
   align-items: start;
 }
+
+/* --- ESTILOS DE MARCA --- */
 .brand-title {
   color: var(--footer-title);
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
   letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
+
 .brand-title .highlight {
   color: var(--accent-color);
 }
+
 .brand-desc {
-  line-height: 1.5;
-  margin-bottom: 1.2rem;
-  font-size: 0.9rem;
-  max-width: 95%;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  max-width: 90%;
 }
+
 .social-icons {
   display: flex;
   gap: 0.8rem;
 }
+
 .social-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 40px; /* Un poco más grandes para touch */
+  height: 40px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
   color: white;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
+
 .social-btn:hover {
   background-color: var(--accent-color);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(211, 47, 47, 0.4);
 }
+
+/* --- ESTILOS DE TÍTULOS DE SECCIÓN --- */
 h4 {
   color: var(--footer-title);
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+  /* Diseño Desktop: Barra a la izquierda */
   border-left: 3px solid var(--accent-color);
-  padding-left: 0.8rem;
+  padding-left: 1rem;
+  margin-top: 0;
 }
+
+/* --- ENLACES --- */
 .nav-vertical {
   display: flex;
   flex-direction: column;
-  gap: 0rem;
 }
+
 .nav-vertical a[mat-button] {
   color: var(--footer-text);
   justify-content: flex-start;
   padding-left: 0;
   font-weight: 400;
-  font-size: 0.9rem;
-  height: 32px;
-  line-height: 32px;
+  font-size: 0.95rem;
 }
+
 .nav-vertical a[mat-button]:hover {
   color: white;
   background: transparent;
-  transform: translateX(3px);
+  padding-left: 5px; /* Efecto sutil de movimiento */
 }
+
 .arrow-icon {
-  font-size: 16px;
-  width: 16px;
-  height: 16px;
-  margin-right: 6px;
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
   color: var(--accent-color);
+  opacity: 0.7;
 }
+
+/* --- CONTACTO --- */
 .contact-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
 .contact-list li {
   display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  margin-bottom: 0.8rem;
-  font-size: 0.9rem;
+  align-items: flex-start; /* Alineación superior para textos largos */
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
 }
+
 .contact-list mat-icon {
   color: var(--accent-color);
   font-size: 20px;
   width: 20px;
   height: 20px;
+  margin-top: 2px; /* Ajuste fino visual */
 }
+
+/* --- BOTTOM BAR --- */
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 1rem;
+  padding-top: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
 }
+
 .bottom-links a {
-  color: var(--footer-text);
+  color: inherit;
   text-decoration: none;
   transition: color 0.2s;
 }
+
 .bottom-links a:hover {
   color: var(--accent-color);
 }
+
 .separator {
-  margin: 0 0.5rem;
-  color: rgba(255, 255, 255, 0.2);
+  margin: 0 0.8rem;
+  opacity: 0.3;
 }
-@media (max-width: 900px) {
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-  }
-  .col-contact {
-    grid-column: span 2;
-  }
-}
+
+/* pie-pagina.css - PARTE FINAL (Reemplaza el @media existente) */
+
 @media (max-width: 600px) {
   .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    text-align: center;
   }
-  .col-contact {
-    grid-column: auto;
+
+  /* --- AQUÍ ESTÁ EL TRUCO PARA LOS ÍCONOS --- */
+  .social-icons {
+    justify-content: center; /* Obliga a los ítems flex a ir al centro */
+    width: 100%;             /* Asegura que el contenedor tenga espacio para centrar */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
+
+  /* El resto de correcciones de alineación */
+  .contact-list, 
+  .nav-vertical {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-vertical a[mat-button] {
+    justify-content: center;
+    width: auto;
+    padding: 0 1rem;
+  }
+
+  h4 {
+    border-left: none;
+    padding-left: 0;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+  }
+  
+  h4::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+    background-color: var(--accent-color);
+  }
+
+  .contact-list li {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+  }
+
   .footer-bottom {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
     text-align: center;
   }
 }
