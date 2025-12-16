@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { ContactoComponent } from '../home/componentes/contacto/contacto';
+import { FormularioContactoComponent } from './componentes/formulario-contacto/formulario-contacto';
 
 @Component({
   selector: 'app-contacto-page',
   standalone: true,
-  imports: [ContactoComponent],
+  imports: [FormularioContactoComponent],
   templateUrl: './contacto.html',
   styleUrl: './contacto.css',
 })
