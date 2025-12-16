@@ -1,5 +1,9 @@
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 :root {
   --color-carbon: #121212;
   --color-carbon-light: #1e1e1e;
@@ -48,7 +52,6 @@ h5 {
   max-width: var(--ancho-maximo);
   margin: 0 auto;
   padding: 0 1.5rem;
-  box-sizing: border-box;
 }
 
 button.mat-mdc-raised-button,
