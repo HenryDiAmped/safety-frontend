@@ -1,44 +1,54 @@
 .formulario-contacto {
-  max-width: 600px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: transparent;
 }
 
 .formulario-contacto h3 {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.2rem;
   color: var(--color-carbon, #333);
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: 600;
 }
 
 .campo-formulario {
   width: 100%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .btn-enviar {
-  width: 100%;
-  padding: 1rem;
+  display: inline-block;
+  margin: 1.2rem auto 0 auto;
+  padding: 0.9rem 2.2rem;
   background-color: var(--color-carbon, #1a1a1a) !important;
   color: white !important;
-  font-size: 1.1rem;
-  font-weight: 500;
-  border-radius: 4px;
-  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 28px;
+  transition: all 0.25s ease;
 }
 
 .btn-enviar:hover:not(:disabled) {
   background-color: #333 !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
 .btn-enviar:disabled {
   background-color: #ccc !important;
   color: #666 !important;
+}
+
+/* Inputs blancos y con borde redondeado */
+input.mat-input-element, textarea.mat-input-element {
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  border-radius: 8px;
 }
 
 @media (max-width: 600px) {
