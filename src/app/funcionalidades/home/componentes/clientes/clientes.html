@@ -1,0 +1,20 @@
+<section class="seccion-clientes">
+  <div class="carrusel-container">
+    <div class="fade-overlay izquierda"></div>
+    <div class="fade-overlay derecha"></div>
+    <div class="carrusel-track">
+      <div class="slide" *ngFor="let cliente of itemsDisplay">
+        <h2 class="logo-texto">{{ cliente.nombre }}</h2>
+      </div>
+    </div>
+  </div>
+  <div class="contenido-inferior">
+    <p class="texto-social">
+      Más de <span class="resaltado">4000</span> empresas usan R & R para la formación de sus
+      equipos
+    </p>
+    <button mat-stroked-button class="btn-asesoria" (click)="solicitarAsesoria()">
+      SOLICITAR ASESORÍA
+    </button>
+  </div>
+</section>

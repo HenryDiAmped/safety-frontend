@@ -1,0 +1,132 @@
+.seccion-servicios-bg {
+  background-color: var(--color-gris-claro, #f5f5f5);
+  padding: 6rem 0;
+  width: 100%;
+  position: relative;
+}
+.cabecera-seccion {
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.titulo-seccion {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-carbon, #1a1a1a);
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+.separador-rojo {
+  width: 60px;
+  height: 5px;
+  background-color: var(--color-rojo-fuego, #d32f2f);
+  margin: 1.5rem auto;
+  border-radius: 2px;
+}
+.subtitulo-seccion {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+.card-wrapper {
+  height: 100%;
+}
+.card-servicio {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+.card-servicio:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+.borde-superior {
+  height: 4px;
+  width: 0%;
+  background: var(--color-rojo-fuego, #d32f2f);
+  transition: width 0.3s ease;
+  margin: 0 auto;
+}
+.card-servicio:hover .borde-superior {
+  width: 100%;
+}
+.contenido-interno {
+  padding: 2.5rem 2rem 1rem 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.icono-contenedor {
+  width: 56px;
+  height: 56px;
+  background-color: rgba(211, 47, 47, 0.08);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: background 0.3s;
+}
+.icono-contenedor mat-icon {
+  font-size: 28px;
+  width: 28px;
+  height: 28px;
+  color: var(--color-rojo-fuego, #d32f2f);
+}
+.card-servicio:hover .icono-contenedor {
+  background-color: var(--color-rojo-fuego, #d32f2f);
+}
+.card-servicio:hover .icono-contenedor mat-icon {
+  color: white;
+}
+.titulo-card {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-carbon, #1a1a1a);
+  margin-bottom: 1rem;
+}
+.texto-descripcion {
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+.accion-card {
+  padding: 1rem 1.5rem 2rem;
+}
+.btn-leermas {
+  color: var(--color-rojo-fuego, #d32f2f) !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding-left: 0 !important;
+  &:hover {
+    background-color: rgba(211, 47, 47, 0.05) !important;
+  }
+}
+.boton-contenedor {
+  text-align: center;
+}
+.btn-servicios-principal {
+  background-color: var(--color-carbon, #1a1a1a) !important;
+  color: white !important;
+  padding: 1.5rem 3rem !important;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 4px;
+}

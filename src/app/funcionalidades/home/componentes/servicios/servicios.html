@@ -1,0 +1,28 @@
+<section class="seccion-servicios-bg">
+  <div class="contenedor-limite">
+    <header class="cabecera-seccion">
+      <h2 class="titulo-seccion">Nuestras Soluciones</h2>
+      <div class="separador-rojo"></div>
+      <p class="subtitulo-seccion">Excelencia técnica y cumplimiento normativo para tu empresa</p>
+    </header>
+    <div class="grid-cards">
+      <article *ngFor="let item of listaServicios" class="card-wrapper">
+        <mat-card class="card-servicio">
+          <div class="borde-superior"></div>
+          <mat-card-content class="contenido-interno">
+            <div class="icono-contenedor">
+              <mat-icon>{{ item.icono }}</mat-icon>
+            </div>
+            <h3 class="titulo-card">{{ item.titulo }}</h3>
+            <p class="texto-descripcion">{{ item.descripcion }}</p>
+          </mat-card-content>
+          <div class="accion-card">
+            <button mat-button class="btn-leermas">
+              SABER MÁS <mat-icon iconPositionEnd>arrow_forward</mat-icon>
+            </button>
+          </div>
+        </mat-card>
+      </article>
+    </div>
+  </div>
+</section>
