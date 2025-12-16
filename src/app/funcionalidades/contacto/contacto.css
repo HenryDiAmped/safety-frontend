@@ -4,7 +4,8 @@
 	grid-template-columns: 1fr 520px;
 	gap: 4rem;
 	align-items: start;
-	padding: 4rem 0;
+	/* dejar espacio debajo del header fijo */
+	padding: calc(var(--header-height, 80px) + 1.5rem) 0 4rem 0;
 }
 
 .contact-info {
@@ -58,5 +59,20 @@
 	}
 	.contact-card {
 		order: 2;
+	}
+}
+
+/* Mejora layout móvil: centrar tarjeta y reducir padding del contenedor */
+@media (max-width: 600px) {
+	.grid-contacto-page {
+		padding: calc(var(--header-height, 80px) + 1rem) 0 2rem 0;
+	}
+	.contact-info {
+		padding-right: 0;
+	}
+	.contact-card {
+		padding: 18px;
+		border-radius: 10px;
+		box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 	}
 }
