@@ -1,0 +1,34 @@
+<section class="seccion-cursos">
+  <div class="contenedor-limite">
+
+    <div class="grid-cursos">
+      <article class="curso-card" *ngFor="let item of cursos">
+
+        <div class="card-header">
+          <div class="badge-instructor">
+            <mat-icon>person</mat-icon> {{ item.instructor }}
+          </div>
+        </div>
+
+        <div class="card-body">
+          <h3>{{ item.titulo }}</h3>
+          <p class="descripcion">{{ item.descripcion }}</p>
+
+          <div class="separador"></div>
+
+          <div class="card-footer">
+            <div class="precio">
+              <span class="moneda">S/</span>
+              <span class="monto">{{ item.precio | number:'1.2-2' }}</span>
+            </div>
+            <button mat-flat-button color="primary" class="btn-ver">
+              VER CURSO
+            </button>
+          </div>
+        </div>
+
+      </article>
+    </div>
+
+  </div>
+</section>
