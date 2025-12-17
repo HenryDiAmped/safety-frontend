@@ -1,0 +1,74 @@
+/* --- ESTILOS POR DEFECTO (HOME, SERVICIOS, ETC.) --- */
+/* Se mantienen alineados a la izquierda como siempre */
+
+.hero-bg {
+  height: 100vh;
+  min-height: 600px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(90deg, rgba(18, 18, 18, 0.95) 0%, rgba(18, 18, 18, 0.7) 100%);
+  z-index: 1;
+}
+
+.contenido-flex {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex; /* Flexbox base */
+  justify-content: flex-start; /* Por defecto a la izquierda */
+}
+
+.texto-hero {
+  max-width: 650px;
+  color: white;
+}
+
+/* ... (Tus estilos de titulo, subtitulo, etc. se quedan igual) ... */
+.titulo-gigante { font-size: 3.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; text-transform: uppercase; }
+.subtitulo { color: var(--color-amarillo-aviso, #ffd740); font-weight: 700; letter-spacing: 2px; display: block; margin-bottom: 1rem; text-transform: uppercase; }
+
+
+/* --- NUEVO: ESTILO EXCLUSIVO PARA CUANDO SE PIDE CENTRADO --- */
+.modo-centrado {
+  justify-content: center !important; /* Fuerza al centro horizontalmente */
+  text-align: center !important;      /* Centra el texto */
+}
+
+.modo-centrado .texto-hero {
+  align-items: center;    /* Centra items flex hijos */
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;       /* Un poco más ancho para verse bien centrado */
+}
+
+.modo-centrado .descripcion {
+  border-left: none;      /* Quitamos la línea roja lateral si existe */
+  padding-left: 0;
+}
+
+.texto-amarillo {
+  color: var(--color-amarillo-aviso, #ffd740);
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: -5px;
+  margin-bottom: 2rem;
+}
+
+/* Flecha (igual que antes) */
+.btn-flecha {
+  position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);
+  background: none; border: none; color: white; cursor: pointer; z-index: 10;
+  animation: rebote 2s infinite;
+}
+.btn-flecha mat-icon { font-size: 40px; width: 40px; height: 40px; }
+@keyframes rebote { 0%,100%{transform:translateX(-50%) translateY(0);} 50%{transform:translateX(-50%) translateY(-10px);} }

@@ -97,3 +97,40 @@ button.mat-mdc-stroked-button {
 .menu-bombero-panel .mat-mdc-menu-content {
   padding: 0 !important;
 }
+/* =========================================
+   BOTÓN HERO "IMPRESIONANTE" (Modificado)
+   ========================================= */
+
+.btn-hero {
+  /* 1. Color Rojo Fuego Intenso */
+  background-color: var(--color-rojo-fuego) !important;
+  color: var(--color-blanco) !important;
+
+  /* 2. Tamaño Gigante */
+  font-size: 1.3rem !important;      /* Texto más grande */
+  padding: 1.5rem 3.5rem !important; /* Mucho más relleno (ancho y alto) */
+  
+  /* 3. Estilo Visual */
+  letter-spacing: 2px !important;    /* Espaciado elegante entre letras */
+  border-radius: 8px !important;     /* Bordes un poco más suaves */
+  
+  
+  /* 5. Transición suave */
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+
+/* EFECTO AL PASAR EL MOUSE (HOVER) */
+.btn-hero:hover {
+  background-color: #b71c1c !important; /* Rojo un poco más oscuro */
+  
+  /* Crece un 5% y sube 4 pixeles */
+  transform: translateY(-4px) scale(1.05) !important;
+  
+
+}
+
+/* EFECTO AL HACER CLICK (ACTIVE) */
+.btn-hero:active {
+  transform: translateY(-1px) scale(0.98) !important;
+  box-shadow: 0 5px 15px rgba(211, 47, 47, 0.4) !important;
+}

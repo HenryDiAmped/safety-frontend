@@ -17,7 +17,6 @@ import { BotonWhatsappComponent } from './compartido/componentes/boton-whatsapp/
     BotonWhatsappComponent // <--- AQUÍ ESTÁ LA CLAVE
   ], 
   templateUrl: './app.html',
-  styleUrls: ['./app.css'],
 })
 export class AppComponent {
   title = 'SAFETY-FRONTEND';

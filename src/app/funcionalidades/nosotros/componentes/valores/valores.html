@@ -1,0 +1,19 @@
+<section class="section-valores">
+  <div class="contenedor-limite">
+    <div class="header-valores">
+      <h2>Nuestros Valores</h2>
+      <p>Los pilares que sostienen cada decisión que tomamos.</p>
+    </div>
+    
+    <div class="grid-valores">
+      <div class="item-valor" *ngFor="let val of valores">
+        <div class="icono-valor">
+          <mat-icon>{{ val.icon }}</mat-icon>
+        </div>
+        <span class="numero-valor">{{ val.id }}</span>
+        <h3>{{ val.titulo }}</h3>
+        <p>{{ val.texto }}</p>
+      </div>
+    </div>
+  </div>
+</section>

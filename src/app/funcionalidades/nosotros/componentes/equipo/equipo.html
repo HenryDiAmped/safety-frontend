@@ -1,0 +1,16 @@
+<section class="section-full-width bg-light">
+  <div class="content-centered">
+    <h2 class="section-title text-center">Nuestro Equipo</h2>
+    <div class="team-grid">
+      @for (member of team; track member.name) {
+        <mat-card class="team-card">
+          <img mat-card-image [src]="member.image" [alt]="member.name">
+          <mat-card-content>
+            <h3>{{ member.name }}</h3>
+            <p class="role">{{ member.role }}</p>
+          </mat-card-content>
+        </mat-card>
+      }
+    </div>
+  </div>
+</section>
