@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BannerCursosComponent } from './componentes/banner-cursos/banner-cursos';
+import { BannerPrincipalComponent } from '../../compartido/componentes/banner-principal/banner-principal';
 import { ListaInfoComponent } from './componentes/lista-info/lista-info';
 
 export interface Curso {
@@ -16,8 +16,8 @@ export interface Curso {
   standalone: true,
   imports: [
     CommonModule,
-    BannerCursosComponent,
-    ListaInfoComponent
+    ListaInfoComponent,
+    BannerPrincipalComponent
   ],
   templateUrl: './curso-lista.html',
 })
