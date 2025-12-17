@@ -15,4 +15,4 @@ export const routes: Routes = [
   { path: 'contacto', component: ContactoPageComponent },
 
   { path: '**', redirectTo: 'inicio' },
-];
+]; 
