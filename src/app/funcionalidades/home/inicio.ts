@@ -6,7 +6,6 @@ import { ClientesComponent } from './componentes/clientes/clientes';
 import { BannerPrincipalComponent } from '../../compartido/componentes/banner-principal/banner-principal';
 import { ContactoComponent } from './componentes/contacto/contacto';
 
-
 @Component({
   selector: 'app-inicio',
   standalone: true,
@@ -17,7 +16,6 @@ import { ContactoComponent } from './componentes/contacto/contacto';
     ClientesComponent,
     BannerPrincipalComponent,
     ContactoComponent,
-
   ],
   templateUrl: './inicio.html',
 })

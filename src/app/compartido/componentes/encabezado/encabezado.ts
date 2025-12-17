@@ -10,19 +10,19 @@ import { MatMenuModule } from '@angular/material/menu';
   selector: 'app-encabezado',
   standalone: true,
   imports: [
-    CommonModule, 
-    RouterModule, 
-    MatToolbarModule, 
-    MatButtonModule, 
-    MatIconModule, 
-    MatMenuModule
+    CommonModule,
+    RouterModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatMenuModule,
   ],
   templateUrl: './encabezado.html',
   styleUrl: './encabezado.css',
 })
 export class EncabezadoComponent {
   isScrolled: boolean = false;
-  
+
   @HostListener('window:scroll', [])
   onWindowScroll() {
     this.isScrolled = window.scrollY > 50;

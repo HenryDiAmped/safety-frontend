@@ -16,6 +16,6 @@ import { BannerPrincipalComponent } from '../../compartido/componentes/banner-pr
     BannerPrincipalComponent,
   ],
   templateUrl: './nosotros.html',
-  styleUrls: ['./nosotros.css']
+  styleUrls: ['./nosotros.css'],
 })
 export class NosotrosComponent {}

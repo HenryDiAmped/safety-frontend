@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './historia.html',
-  styleUrl: './historia.css'
+  styleUrl: './historia.css',
 })
 export class HistoriaComponent {
   anioInicio = 2015;

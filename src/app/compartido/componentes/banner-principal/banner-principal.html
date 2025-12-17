@@ -1,24 +1,23 @@
 <section class="hero-bg" [style.background-image]="'url(' + imagenFondo + ')'">
-  
-  <div class="contenedor-limite contenido-flex" [class.modo-centrado]="centrarContenido">
-    
+  <div class="contenido-flex" [class.modo-centrado]="centrarContenido">
     <div class="texto-hero">
-      <h1 class="titulo-gigante" [innerHTML]="titulo"></h1>
-      
-      <p class="texto-amarillo" *ngIf="textoAmarillo">
-        {{ textoAmarillo }}
-      </p>
-
       <span class="subtitulo" *ngIf="subtitulo">{{ subtitulo }}</span>
+      <h1 class="titulo-gigante" [innerHTML]="titulo"></h1>
+      <div class="texto-amarillo" *ngIf="textoAmarillo">
+        {{ textoAmarillo }}
+      </div>
       <p class="descripcion" *ngIf="descripcion">{{ descripcion }}</p>
-
       <div class="grupo-botones">
         <ng-content></ng-content>
       </div>
     </div>
   </div>
-
-  <button *ngIf="mostrarFlecha" class="btn-flecha" (click)="scrollToContent()">
+  <button
+    *ngIf="mostrarFlecha"
+    class="btn-flecha"
+    (click)="scrollToContent()"
+    aria-label="Desplazar hacia abajo"
+  >
     <mat-icon>keyboard_arrow_down</mat-icon>
   </button>
 </section>

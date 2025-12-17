@@ -17,7 +17,12 @@
             <p class="texto-descripcion">{{ item.descripcion }}</p>
           </mat-card-content>
           <div class="accion-card">
-            <button mat-button class="btn-leermas">
+            <button
+              mat-button
+              class="btn-leermas"
+              [routerLink]="['/servicios']"
+              [fragment]="item.fragment"
+            >
               SABER MÁS <mat-icon iconPositionEnd>arrow_forward</mat-icon>
             </button>
           </div>

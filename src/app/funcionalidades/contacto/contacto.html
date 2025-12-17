@@ -1,43 +1,69 @@
-        <section class="contact-page">
-            <div class="contenedor-limite grid-contacto-page">
-                <div class="contact-info">
-                    <h2 class="titulo-seccion">Ponte En <span class="resaltar">Contacto</span> Con Nosotros</h2>
+<app-banner-principal
+  titulo="CONTACTO"
+  textoAmarillo="Estamos listos para responder ante cualquier requerimiento"
+  imagenFondo="https://cdn.midjourney.com/7c27b597-8ed8-43f1-ae0f-1422795e9ea2/0_0.png"
+  [mostrarFlecha]="true"
+  [centrarContenido]="true"
+>
+</app-banner-principal>
 
-                    <div class="info-item">
-                        <mat-icon class="icono">location_on</mat-icon>
-                        <div class="info-text">
-                            <h4>Nuestra Dirección</h4>
-                            <p>
-                                Desarrollamos programas de capacitación a medida para empresas y profesionales.<br />
-                                Av. Industrial km. 4 - Semirrástica El Bosque<br />
-                                Trujillo - La Libertad
-                            </p>
-                        </div>
-                    </div>
+<section class="seccion-contacto">
+  <div class="contenedor-limite grid-contacto-page">
+    <div class="columna-info">
+      <h2 class="titulo-seccion">
+        Ponte en contacto con <br />
+        <span class="resaltar-rojo">nuestros expertos</span>
+      </h2>
+      <div class="barra-decorativa"></div>
 
-                    <hr />
+      <p class="texto-intro">
+        ¿Necesita una inspección de seguridad, capacitación para su brigada o asesoría normativa?
+        Estamos disponibles para atender sus consultas.
+      </p>
 
-                    <div class="info-item">
-                        <mat-icon class="icono">email</mat-icon>
-                        <div class="info-text">
-                            <h4>Correo</h4>
-                            <p>Nos pondremos en contacto contigo lo más pronto posible<br />contacto@tudominio.com</p>
-                        </div>
-                    </div>
+      <div class="lista-info">
+        <div class="info-item">
+          <div class="icono-box">
+            <mat-icon>location_on</mat-icon>
+          </div>
+          <div class="info-text">
+            <h4>Oficina Central</h4>
+            <p>
+              Av. Industrial km. 4 - Semirrástica El Bosque<br />
+              Trujillo - La Libertad
+            </p>
+          </div>
+        </div>
 
-                    <hr />
+        <div class="info-item">
+          <div class="icono-box">
+            <mat-icon>email</mat-icon>
+          </div>
+          <div class="info-text">
+            <h4>Correo Electrónico</h4>
+            <p>contacto@safetyfire.com</p>
+            <p class="sub-text">Respuesta en max. 24 horas</p>
+          </div>
+        </div>
 
-                    <div class="info-item">
-                        <mat-icon class="icono">phone</mat-icon>
-                        <div class="info-text">
-                            <h4>Teléfono</h4>
-                            <p>Lunes a Viernes de 8:00 am a 5:00 pm<br />989794322</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="info-item">
+          <div class="icono-box">
+            <mat-icon>phone_in_talk</mat-icon>
+          </div>
+          <div class="info-text">
+            <h4>Central Telefónica</h4>
+            <p class="telefono-grande">989 794 322</p>
+            <p class="sub-text">Lunes a Viernes de 8:00 am a 6:00 pm</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-                <div class="contact-card">
-                    <app-formulario-contacto></app-formulario-contacto>
-                </div>
-            </div>
-        </section>
+    <div class="columna-formulario">
+      <div class="tarjeta-elevada">
+        <div class="borde-superior-rojo"></div>
+        <app-formulario-contacto></app-formulario-contacto>
+      </div>
+    </div>
+  </div>
+</section>
