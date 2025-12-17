@@ -5,6 +5,7 @@ import { BeneficiosComponent } from './componentes/beneficios/beneficios';
 import { ClientesComponent } from './componentes/clientes/clientes';
 import { BannerPrincipalComponent } from '../../compartido/componentes/banner-principal/banner-principal';
 import { ContactoComponent } from './componentes/contacto/contacto';
+import { BotonWhatsappComponent } from '../../compartido/componentes/boton-whatsapp/boton-whatsapp';
 
 
 @Component({

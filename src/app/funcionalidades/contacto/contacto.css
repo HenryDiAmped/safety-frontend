@@ -1,0 +1,78 @@
+/* Estilos para la página de contacto (layout dos columnas) */
+.grid-contacto-page {
+	display: grid;
+	grid-template-columns: 1fr 520px;
+	gap: 4rem;
+	align-items: start;
+	/* dejar espacio debajo del header fijo */
+	padding: calc(var(--header-height, 80px) + 1.5rem) 0 4rem 0;
+}
+
+.contact-info {
+	padding-right: 2rem;
+}
+
+.titulo-seccion {
+	font-size: 2.6rem;
+	font-weight: 700;
+	color: #333;
+	margin-bottom: 2rem;
+}
+.titulo-seccion .resaltar {
+	color: #111;
+	font-weight: 800;
+}
+
+.info-item {
+	display: flex;
+	gap: 1rem;
+	align-items: flex-start;
+	margin-bottom: 1.2rem;
+}
+.info-item .icono {
+	font-size: 28px;
+	color: #222;
+	min-width: 36px;
+}
+.info-text h4 {
+	margin: 0 0 6px 0;
+	font-size: 1rem;
+	font-weight: 700;
+}
+.info-text p {
+	margin: 0;
+	color: #555;
+	font-size: 0.95rem;
+}
+
+.contact-card {
+	background: #e6e6e6;
+	padding: 28px;
+	border-radius: 12px;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+@media (max-width: 980px) {
+	.grid-contacto-page {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+	.contact-card {
+		order: 2;
+	}
+}
+
+/* Mejora layout móvil: centrar tarjeta y reducir padding del contenedor */
+@media (max-width: 600px) {
+	.grid-contacto-page {
+		padding: calc(var(--header-height, 80px) + 1rem) 0 2rem 0;
+	}
+	.contact-info {
+		padding-right: 0;
+	}
+	.contact-card {
+		padding: 18px;
+		border-radius: 10px;
+		box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+	}
+}
