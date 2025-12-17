@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 import { ServiciosComponent } from './componentes/servicios/servicios';
 import { BeneficiosComponent } from './componentes/beneficios/beneficios';
 import { ClientesComponent } from './componentes/clientes/clientes';
-import { BannerPrincipalComponent } from './componentes/banner-principal/banner-principal';
+import { BannerPrincipalComponent } from '../../compartido/componentes/banner-principal/banner-principal';
 import { ContactoComponent } from './componentes/contacto/contacto';
-import { BotonWhatsappComponent } from '../../compartido/componentes/boton-whatsapp/boton-whatsapp';
+
 
 @Component({
   selector: 'app-inicio',
@@ -17,6 +17,7 @@ import { BotonWhatsappComponent } from '../../compartido/componentes/boton-whats
     ClientesComponent,
     BannerPrincipalComponent,
     ContactoComponent,
+
   ],
   templateUrl: './inicio.html',
 })
