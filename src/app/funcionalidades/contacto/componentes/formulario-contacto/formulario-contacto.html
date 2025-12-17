@@ -1,0 +1,40 @@
+<form [formGroup]="contactoForm" (ngSubmit)="onSubmit()" class="formulario-contacto">
+  <h3>Contáctanos</h3>
+
+  <mat-form-field appearance="outline" class="campo-formulario">
+    <mat-label>Nombre</mat-label>
+    <input matInput formControlName="nombre" placeholder="Tu nombre completo">
+    <mat-error *ngIf="contactoForm.get('nombre')?.invalid && contactoForm.get('nombre')?.touched">
+      El nombre es requerido y debe tener al menos 2 caracteres.
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="campo-formulario">
+    <mat-label>Email</mat-label>
+    <input matInput type="email" formControlName="email" placeholder="tu@email.com">
+    <mat-error *ngIf="contactoForm.get('email')?.invalid && contactoForm.get('email')?.touched">
+      Ingresa un email válido.
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="campo-formulario">
+    <mat-label>Teléfono</mat-label>
+    <input matInput formControlName="telefono" placeholder="999999999">
+    <mat-error *ngIf="contactoForm.get('telefono')?.invalid && contactoForm.get('telefono')?.touched">
+      El teléfono es requerido y debe tener al menos 9 dígitos.
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="campo-formulario">
+    <mat-label>Mensaje</mat-label>
+    <textarea matInput formControlName="mensaje" rows="4" placeholder="Describe tu consulta..."></textarea>
+    <mat-error *ngIf="contactoForm.get('mensaje')?.invalid && contactoForm.get('mensaje')?.touched">
+      El mensaje es requerido y debe tener al menos 10 caracteres.
+    </mat-error>
+  </mat-form-field>
+
+  <button mat-flat-button type="submit" [disabled]="contactoForm.invalid" class="btn-enviar">
+    Enviar Mensaje
+    <mat-icon iconPositionEnd>send</mat-icon>
+  </button>
+</form>
