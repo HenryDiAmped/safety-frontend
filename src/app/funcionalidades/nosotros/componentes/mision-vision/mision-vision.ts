@@ -7,19 +7,19 @@ import { MatIconModule } from '@angular/material/icon';
   standalone: true,
   imports: [MatCardModule, MatIconModule],
   templateUrl: './mision-vision.html',
-  styleUrls: ['./mision-vision.css']
+  styleUrls: ['./mision-vision.css'],
 })
 export class MisionVisionComponent {
   corporateData = [
     {
       title: 'Misión',
       text: 'Brindar soluciones tecnológicas y de diseño innovadoras que potencien la transformación digital de nuestros clientes.',
-      icon: 'verified_user'
+      icon: 'verified_user',
     },
     {
       title: 'Visión',
       text: 'Ofrecer productos de alta calidad centrados en la experiencia del usuario y desarrollados con los más altos estándares de ingeniería.',
-      icon: 'visibility'
-    }
+      icon: 'visibility',
+    },
   ];
 }

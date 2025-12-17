@@ -1,15 +1,12 @@
 .section-historia {
-  padding: 100px 0; /* Un poco más de aire arriba y abajo */
+  padding: 100px 0;
   background-color: var(--color-blanco);
-  text-align: center; /* Centramos todo el contenido */
+  text-align: center;
 }
-
-/* Contenedor específico para controlar el ancho del texto */
 .contenedor-texto {
-  max-width: 1200px; /* Ancho máximo ideal para lectura */
-  margin: 0 auto;   /* Centrado horizontalmente */
+  max-width: 1200px;
+  margin: 0 auto;
 }
-
 .etiqueta {
   color: var(--color-rojo-fuego);
   font-weight: 700;
@@ -19,33 +16,27 @@
   margin-bottom: 20px;
   text-transform: uppercase;
 }
-
 .titulo-seccion {
-  font-size: 2.8rem; /* Título un poco más grande e impactante */
+  font-size: 2.8rem;
   color: var(--color-carbon);
   margin-bottom: 40px;
   line-height: 1.2;
   font-weight: 800;
 }
-
 .contenido-parrafos {
-  border-top: 1px solid rgba(0,0,0,0.1); /* Línea sutil separadora */
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding-top: 40px;
 }
-
 .parrafo {
   color: var(--color-texto-secundario);
-  line-height: 1.9; /* Mayor altura de línea para elegancia */
+  line-height: 1.9;
   margin-bottom: 25px;
   font-size: 1.1rem;
 }
-
 .parrafo strong {
   color: var(--color-carbon);
   font-weight: 600;
 }
-
-/* Ajuste para móviles */
 @media (max-width: 768px) {
   .titulo-seccion {
     font-size: 2rem;

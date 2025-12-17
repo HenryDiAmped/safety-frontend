@@ -10,7 +10,7 @@ import { Curso } from '../../curso-lista';
   standalone: true,
   imports: [CommonModule, MatButtonModule, MatCardModule, MatIconModule],
   templateUrl: './lista-info.html',
-  styleUrl: './lista-info.css'
+  styleUrl: './lista-info.css',
 })
 export class ListaInfoComponent {
   @Input() cursos: Curso[] = [];

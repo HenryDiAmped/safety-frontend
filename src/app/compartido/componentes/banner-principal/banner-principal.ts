@@ -17,9 +17,8 @@ export class BannerPrincipalComponent {
   @Input() descripcion: string = '';
   @Input() imagenFondo: string = '';
   @Input() mostrarFlecha: boolean = false;
-  
-  // NUEVO: Bandera para activar el centrado solo cuando se pida
-  @Input() centrarContenido: boolean = false; 
+
+  @Input() centrarContenido: boolean = false;
 
   scrollToContent() {
     window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });

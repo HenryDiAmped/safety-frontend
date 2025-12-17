@@ -17,7 +17,7 @@ export class PiePaginaComponent {
     { icon: 'camera_alt', label: 'Instagram', url: '#' },
     { icon: 'business', label: 'LinkedIn', url: '#' },
   ];
-  companyLinks = ['Nosotros', 'Proyectos', 'Certificaciones', 'Trabaja con nosotros'];
+  companyLinks = ['Nosotros', 'Servicios', 'Cursos', 'Contacto'];
   contactInfo = {
     address: 'Av. Defensores del Morro, Chorrillos',
     phone: '+51 1 234 5678',

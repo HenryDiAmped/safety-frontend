@@ -14,11 +14,7 @@ export interface Curso {
 @Component({
   selector: 'app-curso-lista',
   standalone: true,
-  imports: [
-    CommonModule,
-    ListaInfoComponent,
-    BannerPrincipalComponent
-  ],
+  imports: [CommonModule, ListaInfoComponent, BannerPrincipalComponent],
   templateUrl: './curso-lista.html',
 })
 export class CursoLista {
@@ -26,26 +22,34 @@ export class CursoLista {
     {
       instructor: 'Rojas B. Everson E.',
       titulo: 'Ofrecemos cursos de actualización',
-      descripcion: 'Ofrecemos cursos de actualización y especialización para potenciar su perfil profesional. Al finalizar y aprobar nuestras evaluaciones.',
-      precio: 500.00
+      descripcion:
+        'Ofrecemos cursos de actualización y especialización para potenciar su perfil profesional. Al finalizar y aprobar nuestras evaluaciones.',
+      precio: 500.0,
+      imagenUrl: 'https://cdn.midjourney.com/7c27b597-8ed8-43f1-ae0f-1422795e9ea2/0_0.png',
     },
     {
       instructor: 'Ing. Carlos Mendez',
       titulo: 'Seguridad Industrial Avanzada',
-      descripcion: 'Domina las normativas vigentes y aprende a gestionar riesgos críticos en plantas industriales con estándares internacionales.',
-      precio: 500.00
+      descripcion:
+        'Domina las normativas vigentes y aprende a gestionar riesgos críticos en plantas industriales con estándares internacionales.',
+      precio: 500.0,
+      imagenUrl: 'https://cdn.midjourney.com/7c27b597-8ed8-43f1-ae0f-1422795e9ea2/0_0.png',
     },
     {
       instructor: 'Ing. Sofia Paredes',
       titulo: 'Lucha Contra Incendios',
-      descripcion: 'Entrenamiento táctico y teórico para brigadas de emergencia. Uso de extintores, mangueras y protocolos de evacuación.',
-      precio: 500.00
+      descripcion:
+        'Entrenamiento táctico y teórico para brigadas de emergencia. Uso de extintores, mangueras y protocolos de evacuación.',
+      precio: 500.0,
+      imagenUrl: 'https://cdn.midjourney.com/7c27b597-8ed8-43f1-ae0f-1422795e9ea2/0_0.png',
     },
     {
       instructor: 'Rojas B. Everson E.',
       titulo: 'Gestión de Riesgos',
-      descripcion: 'Metodologías para la identificación, evaluación y control de riesgos laborales según la Ley 29783.',
-      precio: 500.00
-    }
+      descripcion:
+        'Metodologías para la identificación, evaluación y control de riesgos laborales según la Ley 29783.',
+      precio: 500.0,
+      imagenUrl: 'https://cdn.midjourney.com/7c27b597-8ed8-43f1-ae0f-1422795e9ea2/0_0.png',
+    },
   ];
 }
