@@ -5,6 +5,7 @@ import { BeneficiosComponent } from './componentes/beneficios/beneficios';
 import { ClientesComponent } from './componentes/clientes/clientes';
 import { BannerPrincipalComponent } from '../../compartido/componentes/banner-principal/banner-principal';
 import { ContactoComponent } from './componentes/contacto/contacto';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-inicio',
@@ -16,7 +17,13 @@ import { ContactoComponent } from './componentes/contacto/contacto';
     ClientesComponent,
     BannerPrincipalComponent,
     ContactoComponent,
+    RouterModule,
   ],
   templateUrl: './inicio.html',
 })
-export class InicioComponent {}
+export class InicioComponent {
+[x: string]: any;
+item = {
+    fragment: 'contacto' 
+  };
+}
