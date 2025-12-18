@@ -13,7 +13,13 @@
       Más de <span class="resaltado">4000</span> empresas usan R & R para la formación de sus
       equipos
     </p>
-    <button mat-stroked-button class="btn-asesoria" (click)="solicitarAsesoria()">
+    <button
+    mat-flat-button
+    color="primary"
+    class="btn-hero"
+    [routerLink]="['/contacto']"
+    [fragment]="item.fragment"
+  >
       SOLICITAR ASESORÍA
     </button>
   </div>

@@ -1,14 +1,18 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-clientes',
   standalone: true,
-  imports: [CommonModule, MatButtonModule],
+  imports: [CommonModule, MatButtonModule, RouterModule ],
   templateUrl: './clientes.html',
   styleUrl: './clientes.css',
 })
 export class ClientesComponent implements OnInit {
+    item = {
+    fragment: 'contacto' 
+  };
   @Input() titulo: string = 'Más de 4000 empresas usan Proyecto Safety para la formación';
   itemsOriginales: any[] = [
     { nombre: 'BAVARIA', logoUrl: '' },

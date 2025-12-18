@@ -28,14 +28,14 @@
           </a>
         </div>
       </div>
-      <div class="col-links">
-        <h4>Empresa</h4>
-        <nav class="nav-vertical">
-          <a *ngFor="let item of companyLinks" mat-button href="#">
-            <mat-icon class="arrow-icon">chevron_right</mat-icon> {{ item }}
-          </a>
-        </nav>
-      </div>
+    <div class="col-links">
+      <h4>Empresa</h4>
+      <nav class="nav-vertical">
+        <a *ngFor="let item of companyLinks" mat-button [routerLink]="item.route">
+          <mat-icon class="arrow-icon">chevron_right</mat-icon> {{ item.label }}
+        </a>
+      </nav>
+    </div>
       <div class="col-contact">
         <h4>Contáctanos</h4>
         <ul class="contact-list">
@@ -56,11 +56,6 @@
     </div>
     <div class="footer-bottom">
       <div class="legal-text">© {{ currentYear }} <strong>SAFETY FIRE SOLUTIONS SAC</strong>.</div>
-      <div class="bottom-links">
-        <a href="#">Privacidad</a>
-        <span class="separator">|</span>
-        <a href="#">Términos</a>
-      </div>
     </div>
   </div>
 </footer>
