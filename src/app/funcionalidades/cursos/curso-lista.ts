@@ -9,6 +9,7 @@ export interface Curso {
   descripcion: string;
   precio: number;
   imagenUrl?: string;
+  url?: string;
 }
 
 @Component({
@@ -26,6 +27,7 @@ export class CursoLista {
         'Ofrecemos cursos de actualización y especialización para potenciar su perfil profesional. Al finalizar y aprobar nuestras evaluaciones.',
       precio: 500.0,
       imagenUrl: 'https://cdn.midjourney.com/7c27b597-8ed8-43f1-ae0f-1422795e9ea2/0_0.png',
+      url: 'https://www.udemy.com/course/curso-inteligencia-artificial-web-nuevo-modelo-ia-google-javascript/?couponCode=CM251218G2'
     },
     {
       instructor: 'Ing. Carlos Mendez',
@@ -34,6 +36,7 @@ export class CursoLista {
         'Domina las normativas vigentes y aprende a gestionar riesgos críticos en plantas industriales con estándares internacionales.',
       precio: 500.0,
       imagenUrl: 'https://cdn.midjourney.com/7c27b597-8ed8-43f1-ae0f-1422795e9ea2/0_0.png',
+      url: 'https://www.udemy.com/course/curso-inteligencia-artificial-web-nuevo-modelo-ia-google-javascript/?couponCode=CM251218G2'
     },
     {
       instructor: 'Ing. Sofia Paredes',
@@ -42,6 +45,7 @@ export class CursoLista {
         'Entrenamiento táctico y teórico para brigadas de emergencia. Uso de extintores, mangueras y protocolos de evacuación.',
       precio: 500.0,
       imagenUrl: 'https://cdn.midjourney.com/7c27b597-8ed8-43f1-ae0f-1422795e9ea2/0_0.png',
+      url: 'https://www.udemy.com/course/curso-inteligencia-artificial-web-nuevo-modelo-ia-google-javascript/?couponCode=CM251218G2'
     },
     {
       instructor: 'Rojas B. Everson E.',
@@ -50,6 +54,7 @@ export class CursoLista {
         'Metodologías para la identificación, evaluación y control de riesgos laborales según la Ley 29783.',
       precio: 500.0,
       imagenUrl: 'https://cdn.midjourney.com/7c27b597-8ed8-43f1-ae0f-1422795e9ea2/0_0.png',
+      url: 'https://www.udemy.com/course/curso-inteligencia-artificial-web-nuevo-modelo-ia-google-javascript/?couponCode=CM251218G2'
     },
   ];
 }

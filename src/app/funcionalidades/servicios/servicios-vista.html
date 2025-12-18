@@ -6,7 +6,6 @@
   [centrarContenido]="true"
 >
 </app-banner-principal>
-
 <div class="pagina-servicios">
   <section id="incendios" class="seccion-full-width bg-claro">
     <div class="contenedor-limite">
@@ -17,7 +16,6 @@
           </div>
           <h2 class="titulo-servicio">Sistemas Contra Incendio</h2>
           <div class="separador-rojo"></div>
-
           <p class="texto-destacado">
             Diseñamos e implementamos soluciones robustas que superan las normativas vigentes,
             protegiendo sus activos más valiosos.
@@ -27,7 +25,6 @@
             proyecto. Garantizamos la operatividad de rociadores, alarmas de detección y redes de
             agua conforme a los estándares de INDECI y NFPA.
           </p>
-
           <ul class="lista-check">
             <li><mat-icon>check_circle</mat-icon> Instalación de rociadores y gabinetes.</li>
             <li><mat-icon>check_circle</mat-icon> Mantenimiento de bombas contra incendio.</li>
@@ -35,10 +32,17 @@
             <li><mat-icon>check_circle</mat-icon> Auditorías técnicas para ITSE.</li>
           </ul>
           <div class="accion-bloque">
-            <button mat-raised-button color="primary" class="btn-rojo">VER SERVICIO</button>
+            <button
+              mat-raised-button
+              color="primary"
+              class="btn-rojo"
+              [routerLink]="['/contacto']"
+              [fragment]="item.fragment"
+            >
+              SOLICITAR SERVICIO
+            </button>
           </div>
         </div>
-
         <div class="columna-imagen">
           <div class="marco-imagen">
             <img
@@ -51,7 +55,6 @@
       </div>
     </div>
   </section>
-
   <section id="sst" class="seccion-full-width bg-oscuro">
     <div class="contenedor-limite">
       <div class="grid-split invertido">
@@ -61,12 +64,10 @@
           </div>
           <h2 class="titulo-servicio texto-blanco">Seguridad y Salud (SST)</h2>
           <div class="separador-rojo"></div>
-
           <p class="texto-destacado texto-gris-claro">
             Construimos una cultura de prevención resiliente. Transformamos el cumplimiento
             normativo en una ventaja competitiva para su empresa.
           </p>
-
           <ul class="lista-check check-amarillo texto-blanco">
             <li><mat-icon>security</mat-icon> Implementación del Sistema de Gestión SST.</li>
             <li><mat-icon>security</mat-icon> Elaboración de matriz IPERC y Mapas de Riesgo.</li>
@@ -74,10 +75,17 @@
             <li><mat-icon>security</mat-icon> Planes de contingencia y respuesta a emergencias.</li>
           </ul>
           <div class="accion-bloque">
-            <button mat-raised-button color="primary" class="btn-rojo">VER SERVICIO</button>
+            <button
+              mat-raised-button
+              color="primary"
+              class="btn-rojo"
+              [routerLink]="['/contacto']"
+              [fragment]="item.fragment"
+            >
+              SOLICITAR SERVICIO
+            </button>
           </div>
         </div>
-
         <div class="columna-imagen">
           <div class="marco-imagen">
             <img
@@ -90,7 +98,6 @@
       </div>
     </div>
   </section>
-
   <section id="cursos" class="seccion-full-width bg-claro">
     <div class="contenedor-limite">
       <div class="grid-split">
@@ -100,7 +107,6 @@
           </div>
           <h2 class="titulo-servicio">Capacitación Profesional</h2>
           <div class="separador-rojo"></div>
-
           <p class="texto-destacado">
             Entrenamiento de alto impacto con validez oficial. Tecnología QR antifraude en cada
             certificado emitido.
@@ -109,7 +115,6 @@
             Preparamos a su personal para actuar con decisión. Nuestros cursos combinan teoría
             rigurosa con práctica intensiva en campo, ideal para brigadistas y supervisores.
           </p>
-
           <ul class="lista-check">
             <li><mat-icon>school</mat-icon> Formación de Brigadas de Emergencia.</li>
             <li><mat-icon>school</mat-icon> Trabajos de Alto Riesgo (Altura, Caliente).</li>
@@ -118,14 +123,12 @@
               <mat-icon>qr_code_2</mat-icon> Certificados digitales con verificación inmediata.
             </li>
           </ul>
-
           <div class="accion-bloque">
-            <button mat-raised-button color="primary" class="btn-rojo">
+            <button mat-raised-button color="primary" class="btn-rojo" [routerLink]="['/cursos']">
               VER CATÁLOGO DE CURSOS
             </button>
           </div>
         </div>
-
         <div class="columna-imagen">
           <div class="marco-imagen">
             <img

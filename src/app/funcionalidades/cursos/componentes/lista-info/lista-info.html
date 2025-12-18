@@ -26,7 +26,16 @@
               <span class="moneda">S/</span>
               <span class="monto">{{ item.precio | number : '1.2-2' }}</span>
             </div>
-            <button mat-flat-button class="btn-ver">VER CURSO</button>
+
+            <a
+              mat-flat-button
+              class="btn-ver"
+              [href]="item.url"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              VER CURSO
+            </a>
           </div>
         </div>
       </article>
