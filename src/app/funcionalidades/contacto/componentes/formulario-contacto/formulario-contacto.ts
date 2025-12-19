@@ -24,6 +24,7 @@ import { environment } from '../../../../../environments/environment';
 })
 export class FormularioContactoComponent {
   contactoForm: FormGroup;
+  sentSuccess = false;
 
   constructor(private fb: FormBuilder) {
     this.contactoForm = this.fb.group({
@@ -54,6 +55,8 @@ export class FormularioContactoComponent {
         )
         .then((response) => {
           console.log('ÉXITO!', response.status, response.text);
+          // Ocultar el formulario y mostrar mensaje de éxito
+          this.sentSuccess = true;
           this.contactoForm.reset();
         })
         .catch((err) => {
@@ -62,5 +65,25 @@ export class FormularioContactoComponent {
     } else {
       console.log('Formulario inválido');
     }
+  }
+
+  onTelefonoInput(event: Event) {
+    const input = event.target as HTMLInputElement;
+    if (!input) return;
+
+    // Eliminar cualquier carácter no numérico
+    let val = input.value.replace(/\D/g, '');
+
+    // Cortar a 9 caracteres como máximo
+    if (val.length > 9) val = val.slice(0, 9);
+
+    // Si existe al menos un carácter y el primero no es '9', forzarlo a '9'
+    if (val.length >= 1 && val.charAt(0) !== '9') {
+      val = '9' + val.slice(1);
+    }
+
+    // Actualizar el input y el FormControl sin emitir eventos adicionales
+    input.value = val;
+    this.contactoForm.get('telefono')?.setValue(val, { emitEvent: false });
   }
 }

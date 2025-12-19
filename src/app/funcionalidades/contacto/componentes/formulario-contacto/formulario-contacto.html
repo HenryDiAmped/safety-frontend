@@ -1,4 +1,4 @@
-<form [formGroup]="contactoForm" (ngSubmit)="onSubmit()" class="formulario-contacto">
+<form *ngIf="!sentSuccess" [formGroup]="contactoForm" (ngSubmit)="onSubmit()" class="formulario-contacto">
   <h3>Contáctanos</h3>
   <mat-form-field appearance="outline" class="campo-formulario">
     <mat-label>Nombre</mat-label>
@@ -16,11 +16,16 @@
   </mat-form-field>
   <mat-form-field appearance="outline" class="campo-formulario">
     <mat-label>Teléfono</mat-label>
-    <input matInput formControlName="telefono" placeholder="999999999" />
-    <mat-error
-      *ngIf="contactoForm.get('telefono')?.invalid && contactoForm.get('telefono')?.touched"
-    >
-      El teléfono es requerido y debe tener al menos 9 dígitos.
+    <input
+      matInput
+      formControlName="telefono"
+      placeholder="999999999"
+      maxlength="9"
+      inputmode="numeric"
+      (input)="onTelefonoInput($event)"
+    />
+    <mat-error *ngIf="contactoForm.get('telefono')?.invalid && contactoForm.get('telefono')?.touched">
+      El teléfono es requerido y debe tener exactamente 9 dígitos numéricos.
     </mat-error>
   </mat-form-field>
   <mat-form-field appearance="outline" class="campo-formulario">
@@ -40,3 +45,8 @@
     <mat-icon iconPositionEnd>send</mat-icon>
   </button>
 </form>
+
+<div *ngIf="sentSuccess" class="mensaje-exito">
+  <h3>Formulario enviado correctamente</h3>
+  <p>Nos pondremos en contacto a la brevedad posible. Gracias.</p>
+</div>
